@@ -79,7 +79,13 @@ async def main():
     hash = invoke_tx_hash(sig1_addr, outer_calldata)
     sub_signature = sign(hash, private_key)
 
-    sub_prepared = {}
+    sub_prepared = sig1.functions["__execute__"].prepare(
+      contract_address=multi_addr,
+      selector=submit_selector,
+      nonce=nonce_1,
+      calldata_len=len(inner_calldata),
+      calldata=inner_calldata
+    )
     #
     # <CODE>
     #
@@ -96,10 +102,9 @@ async def main():
     #
     # <CODE>
     #
-    nonce_2 = 0
-    conf_calldata=[]
-    conf_hash=0
-    conf_signature=[]
+    (nonce_2, ) = await sig2.functions["get_nonce"].call()
+    conf_calldata = [multi_addr, confirm_selector, nonce_2, 1, eventData[1]]
+    conf_hash = invoke_tx_hash(sig2_addr, conf_calldata)
 
     conf_signature = sign(conf_hash, private_key_2)
 
@@ -107,7 +112,7 @@ async def main():
         contract_address=multi_addr,
         selector=confirm_selector,
         nonce=nonce_2,
-        calldata_len=2,
+        calldata_len=1,
         calldata=[eventData[1]])
     conf_invocation = await conf_prepared.invoke(signature=conf_signature, max_fee=data['MAX_FEE'])
 

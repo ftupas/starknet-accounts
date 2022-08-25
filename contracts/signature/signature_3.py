@@ -42,6 +42,7 @@ async def main():
     #
     # <CODE>
     #
+    (nonce, ) = await sig3.functions["get_nonce"].call()
     selector = get_selector_from_name("validate_signature_3")
     calldata = [evaluator_address, selector, 2, nonce, reward_account]
 
@@ -56,7 +57,7 @@ async def main():
         contract_address=evaluator_address,
         selector=selector,
         calldata_len=2,
-        calldata=[0, 0])
+        calldata=[nonce, reward_account])
     
     invocation = await prepared.invoke(signature=signature, max_fee=data['MAX_FEE'])
 

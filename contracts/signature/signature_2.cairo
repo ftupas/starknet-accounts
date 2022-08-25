@@ -37,6 +37,12 @@ func is_valid_signature{
     #
     # <CODE>
     #
+    verify_ecdsa_signature(
+        message=hash,
+        public_key=_public_key,
+        signature_r=signature[0],
+        signature_s=signature[1],
+    )
 
     return ()
 end
