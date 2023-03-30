@@ -78,6 +78,13 @@ async def main():
     #
     # <CODE>
     #
+    for i in range(3):
+        bigHash.append(hash & MASK)
+        hash >>= SHIFT
+        bigR.append(sig_r & MASK)
+        sig_r >>= SHIFT
+        bigS.append(sig_s & MASK)
+        sig_s >>= SHIFT
 
     calldata = [*bigHash, *bigR, *bigS, reward_account]
 

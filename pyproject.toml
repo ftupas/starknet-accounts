@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "starknet-accounts"
+version = "0.1.0"
+description = "An automated workshop that will explain what account Abstraction is and how you can leverage it to create powerful custom acounts contracts."
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8,<3.10"
+
+[tool.poetry.dev-dependencies]
+openzeppelin-cairo-contracts = "^0.3.1"
+starknet-devnet = "^0.2.10"
+pytest-asyncio = "^0.19.0"
+"starknet.py" = "^0.4.6-alpha.0"
+rich = "^12.5.1"
+requests = "^2.28.1"
+pytest = "^7.1.2"
+cairo-lang = "^0.9.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

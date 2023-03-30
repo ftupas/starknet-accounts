@@ -41,22 +41,22 @@ async def main():
     #
     call_array = [
         {
-            "to": 0,
+            "to": evaluator_address,
             "selector": selector,
             "data_offset": 0,
-            "data_len": 0
+            "data_len": 1
         },
         {
-            "to": 0,
+            "to": evaluator_address,
             "selector": selector,
-            "data_offset": 0,
-            "data_len": 0
+            "data_offset": 1,
+            "data_len": 1
         },
         {
-            "to": 0,
+            "to": evaluator_address,
             "selector": selector,
-            "data_offset": 0,
-            "data_len": 0
+            "data_offset": 2,
+            "data_len": 1
         },
     ]
     
@@ -65,7 +65,7 @@ async def main():
     #
     # ACTION ITEM 2: format the 'CalldataArray'
     #
-    inner_calldata = [0, 0, 0]
+    inner_calldata = [reward_account, reward_account, reward_account]
     calldata = [
         nonce, len(call_array),
         evaluator_address, selector, 0, 1,

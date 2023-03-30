@@ -47,7 +47,12 @@ func is_valid_signature{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_
     #
     # <CODE>
     #
-
+    verify_ecdsa(
+        public_key_pt=_public_key_pt,
+        msg_hash=hash,
+        r=sig_r,
+        s=sig_s,
+    )
     return ()
 end
 

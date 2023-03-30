@@ -1,7 +1,26 @@
 {
-    "http://localhost:5000": {},
+    "http://localhost:5000": {
+        "abstraction/abstraction": "0x5d73601ecd17af646fea3f2f1f8068a152214d57cb7f3b17f9f86ae99559497",
+        "evaluator": "0x3ab46f24e1dae4e02114d0acf90352962b58ead17e074cf365bab26895e3ef6",
+        "multisig/multisig": "0x1f8564bb3ae6f5b6ca88cae7ea8a8314771358dbeb2cc775693a1257ae750fe",
+        "multisig/signature_basic_1": "0x67f81d10f7e6fbd9996445a47453bc7107b0eb60994e1466d49d2d1d4299631",
+        "multisig/signature_basic_2": "0x5ec13d1b615bdfe81fc757e34d516c476f0589266d0c13c49265bcebddcfc43",
+        "multisig/signature_basic_3": "0x26f6ce5165266e5add2b82dc13cd0b7a313fdacf0e54f83133ea143d532e308",
+        "token/TDERC20": "0x121b03a322d65e31c6b17f239c9aeb42225ca739ff6ee8f9a35109764f22553",
+        "tutorial/player_registry": "0x649a626fc2cc223b77e281572362c3012773bf7b9e2d704ebf46618d38d7e83"
+    },
     "testnet": {
+        "abstraction/abstraction": "0x6ca1f16ceaf0c2088ec8c9ea2f262c39725836b1b8a0571707d56f7935f024f",
         "evaluator": "0x04f3bfc2034e30bd25f43502e3c45d3ebe03f9d3060b4c84003690b9a68a41e1",
+        "hello/hello": "0x5136bd1b0a22e04fb8a63033a754945d518b01cf349cea62e0a8273e26e74a",
+        "multicall/multicall": "0x765616ee79929a99bf4dc1b22d8f2e09b83162a46cc9855b56288b3bb138180",
+        "multisig/multisig": "0x68a2e5c4a79d8731ee28094dbd1c71522261ac1546e125bb131823d66df94f4",
+        "multisig/signature_basic_1": "0x5d83be8aca6f54ab7450c9f26389156d195da68d75649d4507d9e81fc167949",
+        "multisig/signature_basic_2": "0x4d0eadb39ef87bc95ce59b18262ce26b41d0ddd8058577c05a4464defcf0faf",
+        "multisig/signature_basic_3": "0x21302fae6d0ee5635e880bbcd251677166f1a6e485ad1d84847d5613005e891",
+        "signature/signature_1": "0xefed140a38b0bd4b3039d3c134c7fde06f28ad8b33258a8407578b1c676306",
+        "signature/signature_2": "0x399a719d8520ee0145034f6b35b68af657dd52298c8adb68a1c6d38d2e61f67",
+        "signature/signature_3": "0x206532e29afff7c48ed0b1efef48377a1d02c5c96521300bcbf76f4a91dff55",
         "token/TDERC20": "0x0134b89cfb9735a407c58b1a454c40634b600ab1e5a37d8138015f025cc8af4f",
         "tutorial/player_registry": "0x045f8c0488cbe3fca19b9cc5ad88468b52b30195e1b73a0b3afbe98e5dfe1807"
     }

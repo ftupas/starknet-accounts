@@ -77,18 +77,19 @@ This project can be made better and will evolve as StarkNet matures. Your contri
 git clone https://github.com/starknet-edu/starknet-accounts
 cd starknet-accounts
 ```
-### Step 2 - Set up your environment
+### Step 2 - Set up your environment using Poetry
 
-This tutorial uses the [cairo environment](https://www.cairo-lang.org/docs/quickstart.html), [starknet-devnet](https://github.com/Shard-Labs/starknet-devnet), and [starknet.py](https://github.com/software-mansion/starknet.py).
+This tutorial uses the [poetry](https://python-poetry.org/), [starknet-devnet](https://github.com/Shard-Labs/starknet-devnet), and [starknet.py](https://github.com/software-mansion/starknet.py).
 
-***Install the cairo environment***
-
-Set up the environment following [these instructions](https://starknet.io/docs/quickstart.html#quickstart)
+***Install poetry***
+```bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+```
 
 ***Install dependencies***
 
 ```bash
-pip3 install --upgrade -r requirements.txt
+poetry install
 ```
 
 ### Step 3 - Set up your devnet
